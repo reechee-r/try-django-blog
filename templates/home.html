@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+this is more about stuff
+{% endblock %}
+
+
+{% block content %}
+<h1>more from about page</h1>
+
+{% if user.is_authenticated %}
+  <h1>You are {{ request.user }}</h1>
+  {% for a in list %}
+    <li>{{ a }}</li>
+  {% endfor %}
+{% else %}
+  <h1>Please login as user</h1>
+{% endif %}
+
+
+
+{% endblock %}
